@@ -1,0 +1,16 @@
+.list {
+  min-height: 350px;
+  padding: 10px 30px;
+}
+
+.list-item {
+
+}
+
+.list-buttons {
+  text-align: center;
+  margin-top: 12px;
+  width: 300px;
+  height: 32px;
+  line-height: 32px;
+}

@@ -1,0 +1,8 @@
+.footer {
+  background: rgb(255,255,255);
+  background: linear-gradient(146deg, rgba(255,255,255,0) 70%, rgba(64,169,255,1) 150%);
+}
+
+.sidebar {
+  background: none;
+}

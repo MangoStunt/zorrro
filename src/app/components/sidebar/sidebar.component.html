@@ -1,0 +1,64 @@
+<ul nz-menu nzMode="inline">
+  <li
+    nz-submenu
+    [(nzOpen)]="openMap['sub1']"
+    (nzOpenChange)="openHandler('sub1')"
+    nzTitle="Groups"
+    nzIcon="team"
+
+  >
+    <ul>
+      <li nz-menu-group nzTitle="Developers">
+        <ul>
+          <li nz-menu-item>Front-End</li>
+          <li nz-menu-item>Back-End</li>
+          <li nz-menu-item>DevOps</li>
+        </ul>
+      </li>
+      <li nz-menu-group nzTitle="QA">
+        <ul>
+          <li nz-menu-item>Automation</li>
+          <li nz-menu-item>Manual</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li
+    nz-submenu
+    [(nzOpen)]="openMap['sub2']"
+    (nzOpenChange)="openHandler('sub2')"
+    nzTitle="Workflows"
+    nzIcon="fork"
+  >
+    <ul>
+      <li nz-menu-item class="icon-menu">Create<span nz-icon nzType="plus-circle" nzTheme="outline"></span></li>
+      <li nz-submenu nzTitle="Release_PROD">
+        <ul>
+          <li nz-menu-item class="icon-menu">Edit<span nz-icon nzType="edit" nzTheme="outline"></span></li>
+          <li nz-menu-item class="icon-menu">Delete<span nz-icon nzType="delete" nzTheme="outline"></span></li>
+        </ul>
+      </li>
+      <li nz-submenu nzTitle="Release_DEV">
+        <ul>
+          <li nz-menu-item class="icon-menu">Edit<span nz-icon nzType="edit" nzTheme="outline"></span></li>
+          <li nz-menu-item class="icon-menu">Delete<span nz-icon nzType="delete" nzTheme="outline"></span></li>
+        </ul>
+      </li>
+      <li nz-menu-item class="icon-menu">Instruction<span nz-icon nzType="book" nzTheme="outline"></span></li>
+    </ul>
+  </li>
+  <li
+    nz-submenu
+    [(nzOpen)]="openMap['sub3']"
+    (nzOpenChange)="openHandler('sub3')"
+    nzTitle="Billing"
+    nzIcon="dollar"
+  >
+    <ul>
+      <li nz-menu-item class="icon-menu">Create New<span nz-icon nzType="plus-circle" nzTheme="outline"></span></li>
+      <li nz-menu-item class="icon-menu">Payment Terms<span nz-icon nzType="clock-circle" nzTheme="outline"></span></li>
+      <li nz-menu-item class="icon-menu">Readme<span nz-icon nzType="info-circle" nzTheme="outline"></span></li>
+    </ul>
+  </li>
+</ul>
+

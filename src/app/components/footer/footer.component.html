@@ -1,0 +1,23 @@
+<nz-card class="footer-card">
+  <div nz-row>
+    <div class="footer-item" nz-col nzSpan="16">
+      <div style="width: 100%; padding:30px;">
+        <nz-card class="partners-card" [nzBordered]="false" nzTitle="Our partners:" [nzExtra]="extraTemplate">
+          <p nz-row><span nz-col nzSpan="6">Ant Design</span><span class="partners-icon" nz-col nzSpan="18" nz-icon nzType="ant-design" nzTheme="outline"></span></p>
+          <p nz-row><span nz-col nzSpan="6">GitLab</span><span class="partners-icon" nz-col nzSpan="18" nz-icon nzType="gitlab" nzTheme="outline"></span></p>
+          <p nz-row><span nz-col nzSpan="6">Medium</span><span class="partners-icon" nz-col nzSpan="18" nz-icon nzType="medium" nzTheme="outline"></span></p>
+          <p nz-row><span nz-col nzSpan="6">Codepen</span><span class="partners-icon" nz-col nzSpan="18" nz-icon nzType="codepen" nzTheme="outline"></span></p>
+        </nz-card>
+      </div>
+      <ng-template #extraTemplate>
+        <a><span>Learn More</span><span nz-icon nzType="double-right" nzTheme="outline"></span></a>
+      </ng-template>
+    </div>
+    <div class="footer-item" nz-col nzSpan="8">
+      <h4 class="rate-text" nz-typography nzDisabled="true">Rate Us:</h4>
+      <nz-rate [(ngModel)]="value" [nzTooltips]="tooltips"></nz-rate>
+      <span *ngIf="value" class="ant-rate-text">{{ value ? tooltips[value - 1] : '' }}</span>
+    </div>
+  </div>
+</nz-card>
+

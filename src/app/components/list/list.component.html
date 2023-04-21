@@ -1,0 +1,33 @@
+<nz-list class="list" [nzLoading]="startLoading">
+  <nz-list-item class="list-item" *ngFor="let user of userList">
+    <ng-container *ngIf="!user.loading">
+        <nz-list-item-meta
+          nzAvatar="{{user.picture.medium}}"
+          nzDescription="Some user data"
+          style="margin: 0 15px"
+        >
+          <nz-list-item-meta-title>
+            <a href="/">{{ user.name.last }}</a>
+          </nz-list-item-meta-title>
+        </nz-list-item-meta>
+        <div style="margin: 0 15px">
+          <span nz-typography nzEditable nzCopyable nzCopyText="{{user.cell}}!">Cell: {{user.cell}}</span>
+        </div>
+        <ul nz-list-item-actions style="margin: 0 15px">
+          <nz-list-item-action><a (click)="edit(user)">Edit</a></nz-list-item-action>
+          <nz-list-item-action><a (click)="info(user)">Info</a></nz-list-item-action>
+        </ul>
+    </ng-container>
+    <nz-skeleton
+      *ngIf="user.loading"
+      [nzAvatar]="true"
+      [nzActive]="true"
+      [nzTitle]="false"
+      [nzLoading]="true"
+    ></nz-skeleton>
+  </nz-list-item>
+  <div class="list-buttons" nz-list-load-more>
+    <button nz-button nzType="primary" *ngIf="!loadingMore" (click)="onLoadMore()">Load more!</button>
+    <button nz-button *ngIf="!loadingMore" (click)="hideLoaded()">Hide Loaded</button>
+  </div>
+</nz-list>

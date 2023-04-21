@@ -1,0 +1,23 @@
+.footer-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-card {
+  background: none;
+  border: none;
+}
+
+.partners-card {
+  background: none;
+}
+
+.partners-icon {
+  display: flex;
+  align-items: center;
+}
+
+.rate-text {
+  padding-top: 10px;
+}
