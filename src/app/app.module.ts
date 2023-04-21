@@ -33,7 +33,7 @@ import {NzCardModule} from "ng-zorro-antd/card";
 import {IconDefinition} from "@ant-design/icons-angular";
 import {
   AntDesignOutline, BookOutline, ClockCircleOutline,
-  CodepenOutline, DeleteOutline, DollarOutline, EditOutline, ForkOutline,
+  CodepenOutline, DeleteOutline, DollarOutline, EditOutline, ForkOutline, GithubOutline,
   GitlabOutline, InfoCircleOutline,
   MediumOutline, PlusCircleOutline,
   SettingOutline, TeamOutline,
@@ -57,7 +57,8 @@ const IconList: IconDefinition[] = [
   DeleteOutline,
   BookOutline,
   ClockCircleOutline,
-  InfoCircleOutline
+  InfoCircleOutline,
+  GithubOutline
 ];
 
 @NgModule({
